@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/amazon_green_primary"
+        app:title="Detalle de tu elección"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="?attr/homeAsUpIndicator"
+        app:navigationIconTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:id="@+id/tvGraciasVoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¡Gracias por tu voto!"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/amazon_green_dark"
+                android:layout_marginBottom="24dp"
+                android:textAlignment="center"/>
+
+            <!-- 1. Perfil del Votante (Datos Demográficos) -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. PERFIL DEL VOTANTE"
+                android:textStyle="bold"
+                android:textColor="@color/amazon_green_dark"
+                android:layout_marginBottom="12dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerEdad"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginBottom="12dp"/>
+
+            <Spinner
+                android:id="@+id/spinnerZona"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etGenero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Género (Opcional)" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- 2. Motivación del Voto -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. MOTIVACIÓN DEL VOTO"
+                android:textStyle="bold"
+                android:textColor="@color/amazon_green_dark"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Propuesta que más te convenció:"
+                android:layout_marginBottom="8dp"/>
+            <Spinner
+                android:id="@+id/spinnerPropuesta"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginBottom="16dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMotivoEleccion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="¿Por qué elegiste a este candidato?"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:lines="3"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nivel de confianza en tu elección:"
+                android:layout_marginBottom="8dp"/>
+            <RatingBar
+                android:id="@+id/rbConfianza"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1.0"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"
+                android:progressTint="#FFEB3B"
+                style="@style/Widget.AppCompat.RatingBar"/>
+
+            <!-- 3. Conocimiento del Candidato -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. CONOCIMIENTO DEL CANDIDATO"
+                android:textStyle="bold"
+                android:textColor="@color/amazon_green_dark"
+                android:layout_marginBottom="12dp"/>
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/swTrayectoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Conoces la trayectoria del candidato?"
+                android:textSize="16sp"
+                android:layout_marginBottom="12dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¿Cómo te enteraste de sus propuestas?"
+                android:layout_marginBottom="8dp"/>
+            <Spinner
+                android:id="@+id/spinnerFuente"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@android:drawable/btn_dropdown"
+                android:layout_marginBottom="32dp"/>
+
+            <Button
+                android:id="@+id/btnEnviarCuestionario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FINALIZAR Y ENVIAR"
+                android:padding="16dp"
+                android:textSize="16sp"
+                android:backgroundTint="@color/amazon_green_primary"
+                android:textColor="@color/white"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnVolverInicio"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DESCARTAR Y VOLVER"
+                android:textColor="@color/amazon_green_dark" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieCheck"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:visibility="gone"
+        app:lottie_autoPlay="false"
+        app:lottie_loop="false"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

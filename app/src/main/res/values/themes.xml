@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Tema Principal Base Material Components -->
+    <style name="Theme.EncuestaAPP" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Colores Primarios -->
+        <item name="colorPrimary">@color/amazon_green_primary</item>
+        <item name="colorPrimaryVariant">@color/amazon_green_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <!-- Barra de Estado -->
+        <item name="android:statusBarColor">@color/amazon_green_dark</item>
+        
+        <!-- Otras propiedades de estilo -->
+        <item name="colorSecondary">@color/amazon_green_light</item>
+        <item name="colorOnSecondary">@color/black</item>
+    </style>
+</resources>

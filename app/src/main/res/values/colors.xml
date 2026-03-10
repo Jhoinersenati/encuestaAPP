@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="amazon_green_dark">#1B5E20</color>
+    <color name="amazon_green_primary">#2E7D32</color>
+    <color name="amazon_green_light">#A5D6A7</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray_light">#F8F9FA</color>
+    
+    <!-- Colores para degradados de candidatos -->
+    <color name="grad_red_start">#FF5252</color>
+    <color name="grad_red_end">#C62828</color>
+    <color name="grad_blue_start">#448AFF</color>
+    <color name="grad_blue_end">#1565C0</color>
+    <color name="grad_green_start">#69F0AE</color>
+    <color name="grad_green_end">#2E7D32</color>
+    
+    <!-- Colores por Partido (fijos) -->
+    <color name="party_red">#E53935</color>
+    <color name="party_blue">#1E88E5</color>
+    <color name="party_green">#43A047</color>
+</resources>

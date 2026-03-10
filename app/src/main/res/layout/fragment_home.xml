@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/amazon_green_primary"
+            app:title="Votación Punchana 2026"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="?attr/homeAsUpIndicator"
+            app:navigationIconTint="@color/white"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Banner Informativo superior -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cardInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            android:background="@color/amazon_green_dark">
+            <TextView
+                android:id="@+id/tvTotalVotos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Total de participación: 0 votos"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textAlignment="center"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/cardInfo"
+        app:layout_constraintBottom_toTopOf="@id/btnVolverInicio"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="¿Quién debería liderar Punchana?"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/amazon_green_dark"
+                android:textAlignment="center"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="8dp"/>
+
+            <!-- Candidato A -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:orientation="vertical">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@android:drawable/ic_menu_myplaces" android:tint="@color/party_red" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Candidato A" android:textSize="22sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Partido del Corazón" android:textSize="16sp" />
+                        </LinearLayout>
+                        <Button android:id="@+id/btnVotarA" android:layout_width="wrap_content" android:layout_height="60dp" android:text="VOTAR" android:textSize="14sp" android:textStyle="bold" android:backgroundTint="@color/party_red" app:cornerRadius="30dp"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvPorcentajeA" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0%" android:textAlignment="viewEnd" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/party_red" android:layout_marginTop="12dp"/>
+                    <ProgressBar android:id="@+id/pbA" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="12dp" android:progressTint="@color/party_red" android:max="100" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Candidato B -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                android:layout_marginBottom="16dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:orientation="vertical">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@android:drawable/ic_menu_myplaces" android:tint="@color/party_blue" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Candidato B" android:textSize="22sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Alianza por el Progreso" android:textSize="16sp" />
+                        </LinearLayout>
+                        <Button android:id="@+id/btnVotarB" android:layout_width="wrap_content" android:layout_height="60dp" android:text="VOTAR" android:textSize="14sp" android:textStyle="bold" android:backgroundTint="@color/party_blue" app:cornerRadius="30dp"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvPorcentajeB" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0%" android:textAlignment="viewEnd" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/party_blue" android:layout_marginTop="12dp"/>
+                    <ProgressBar android:id="@+id/pbB" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="12dp" android:progressTint="@color/party_blue" android:max="100" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Candidato C -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp"
+                android:layout_marginBottom="24dp">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:padding="20dp" android:orientation="vertical">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@android:drawable/ic_menu_myplaces" android:tint="@color/party_green" />
+                        <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:layout_marginStart="16dp" android:orientation="vertical">
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Candidato C" android:textSize="22sp" android:textStyle="bold" />
+                            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fuerza Amazónica" android:textSize="16sp" />
+                        </LinearLayout>
+                        <Button android:id="@+id/btnVotarC" android:layout_width="wrap_content" android:layout_height="60dp" android:text="VOTAR" android:textSize="14sp" android:textStyle="bold" android:backgroundTint="@color/party_green" app:cornerRadius="30dp"/>
+                    </LinearLayout>
+                    <TextView android:id="@+id/tvPorcentajeC" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="0%" android:textAlignment="viewEnd" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/party_green" android:layout_marginTop="12dp"/>
+                    <ProgressBar android:id="@+id/pbC" style="?android:attr/progressBarStyleHorizontal" android:layout_width="match_parent" android:layout_height="12dp" android:progressTint="@color/party_green" android:max="100" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvLiderActual"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Cargando resultados..."
+                android:textAlignment="center"
+                android:textStyle="italic"
+                android:textColor="@color/amazon_green_dark"
+                android:textSize="18sp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="40dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btnVolverInicio"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VOLVER AL INICIO"
+        android:textSize="16sp"
+        android:textColor="@color/amazon_green_dark"
+        android:layout_margin="16dp"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

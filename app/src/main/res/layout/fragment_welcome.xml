@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_light">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="24dp">
+
+            <!-- IMAGEN DEL DISTRITO (La que vas a agregar) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="24dp">
+                
+                <ImageView
+                    android:id="@+id/ivPunchanaDistrito"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/punchana_header"
+                    android:contentDescription="Imagen de Punchana" />
+                <!-- Nota: Si aún no has pegado la foto, Android Studio marcará @drawable/punchana_header en rojo -->
+            </com.google.android.material.card.MaterialCardView>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@android:drawable/ic_menu_myplaces"
+                android:tint="@color/amazon_green_primary"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Elecciones Punchana 2026"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="@color/amazon_green_dark"
+                android:textAlignment="center"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tu opinión es fundamental para construir el futuro de nuestro distrito. Participa en esta encuesta anónima para conocer las tendencias de votación y las propuestas que más importan a los vecinos."
+                android:textSize="17sp"
+                android:lineSpacingExtra="4dp"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:layout_marginBottom="40dp"/>
+
+            <Button
+                android:id="@+id/btnEmpezar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IR A ENCUESTA"
+                android:padding="16dp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:backgroundTint="@color/amazon_green_primary"
+                app:cornerRadius="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/btnReset"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LIMPIAR VOTO (MODO PRUEBAS)"
+                android:textColor="#F44336"
+                android:textSize="12sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2026 Transparencia Electoral"
+                android:textSize="13sp"
+                android:layout_marginTop="32dp"
+                android:textColor="#757575"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

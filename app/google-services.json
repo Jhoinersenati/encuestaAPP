@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "821352656845",
+    "firebase_url": "https://encuestaapp-a1e29-default-rtdb.firebaseio.com",
+    "project_id": "encuestaapp-a1e29",
+    "storage_bucket": "encuestaapp-a1e29.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:821352656845:android:4f563df8c6072e98715e84",
+        "android_client_info": {
+          "package_name": "com.example.encuestaapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "821352656845-og3b7a9p9egimbspspgbdcmtlhl0f9db.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyARb9yFwULTjVYNy_8dOxgVSo_X7-eTfQ8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "821352656845-og3b7a9p9egimbspspgbdcmtlhl0f9db.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

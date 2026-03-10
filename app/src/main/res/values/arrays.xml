@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Propuestas existentes -->
+    <string-array name="propuestas_array">
+        <item>Selecciona una propuesta</item>
+        <item>Mejorar la seguridad ciudadana</item>
+        <item>Construcción de nuevos centros de salud</item>
+        <item>Pavimentación de vías principales</item>
+        <item>Apoyo a emprendedores locales</item>
+        <item>Modernización del mercado de Punchana</item>
+        <item>Programas de educación técnica para jóvenes</item>
+    </string-array>
+
+    <!-- Rango de edades -->
+    <string-array name="edades_array">
+        <item>Selecciona tu rango de edad</item>
+        <item>18-25 años</item>
+        <item>26-40 años</item>
+        <item>41-60 años</item>
+        <item>Más de 60 años</item>
+    </string-array>
+
+    <!-- Zonas de residencia -->
+    <string-array name="zonas_array">
+        <item>Selecciona tu zona</item>
+        <item>Sector Bellavista</item>
+        <item>Nanay</item>
+        <item>Masusa</item>
+        <item>Centro</item>
+        <item>Otros sectores</item>
+    </string-array>
+
+    <!-- Fuentes de información -->
+    <string-array name="fuentes_array">
+        <item>¿Cómo te enteraste?</item>
+        <item>Redes sociales</item>
+        <item>Radio / TV</item>
+        <item>Mitin político</item>
+        <item>Amigos / Familia</item>
+    </string-array>
+</resources>
